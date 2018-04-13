@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"on:" : "SeanDeNigris 3/4/2015 13:31" },
+	"instance" : {
+		"beCash" : "SeanDeNigris 3/6/2015 13:58",
+		"beDate" : "SeanDeNigris 3/6/2015 13:23",
+		"bePaymentType" : "SeanDeNigris 3/6/2015 14:01",
+		"beTotalAmount" : "SeanDeNigris 3/6/2015 13:23",
+		"delete" : "SeanDeNigris 3/12/2015 16:05",
+		"handlesMouseDown:" : "SeanDeNigris 3/4/2015 13:31",
+		"handlesMouseOver:" : "SeanDeNigris 3/4/2015 15:20",
+		"initialize" : "SeanDeNigris 3/6/2015 13:33",
+		"model" : "SeanDeNigris 3/4/2015 13:31",
+		"model:" : "SeanDeNigris 3/12/2015 16:14",
+		"mouseDown:" : "SeanDeNigris 3/4/2015 15:17",
+		"mouseLeave:" : "SeanDeNigris 3/12/2015 16:05",
+		"showContextMenu" : "SeanDeNigris 3/6/2015 13:59" } }

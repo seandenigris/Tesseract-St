@@ -1,0 +1,16 @@
+{
+	"category" : "Tesseract-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SeanDeNigris 3/6/2015 12:53",
+	"instvars" : [
+		"tempFileBase",
+		"tempFileExtension",
+		"client" ],
+	"name" : "Tesseract",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

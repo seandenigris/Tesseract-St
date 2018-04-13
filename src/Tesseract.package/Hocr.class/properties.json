@@ -1,0 +1,15 @@
+{
+	"category" : "Tesseract-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"string",
+		"xmlDocument" ],
+	"name" : "Hocr",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

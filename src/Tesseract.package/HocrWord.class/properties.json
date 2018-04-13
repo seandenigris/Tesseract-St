@@ -1,0 +1,14 @@
+{
+	"category" : "Tesseract-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "HocrWord",
+	"pools" : [
+		 ],
+	"super" : "HocrNode",
+	"type" : "normal" }

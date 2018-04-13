@@ -1,0 +1,15 @@
+{
+	"category" : "Tesseract-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"list",
+		"receipt" ],
+	"name" : "HocrBrowser",
+	"pools" : [
+		 ],
+	"super" : "ComposableModel",
+	"type" : "normal" }

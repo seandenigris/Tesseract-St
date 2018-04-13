@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"on:" : "SeanDeNigris 3/4/2015 08:34" },
+	"instance" : {
+		"extractAmount" : "SeanDeNigris 3/4/2015 13:23",
+		"extractDate" : "SeanDeNigris 3/4/2015 13:25",
+		"handlesMouseDown:" : "SeanDeNigris 3/4/2015 11:58",
+		"initialize" : "SeanDeNigris 3/4/2015 13:29",
+		"model" : "SeanDeNigris 3/4/2015 08:36",
+		"model:" : "SeanDeNigris 3/4/2015 08:37",
+		"mouseDown:" : "SeanDeNigris 3/4/2015 12:01",
+		"showContextMenu" : "SeanDeNigris 3/4/2015 12:08" } }
