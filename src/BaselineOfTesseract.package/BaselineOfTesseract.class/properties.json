@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfTesseract",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfTesseract",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
