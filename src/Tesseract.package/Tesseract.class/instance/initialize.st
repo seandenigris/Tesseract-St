@@ -2,4 +2,4 @@ initialize-release
 initialize
 
 	super initialize.
-	tempFileBase := FileLocator imageDirectory / DateAndTime now asString asLegalSelector.
+	tempFileBase := FileLocator imageDirectory / DateAndTime now asString asValidSelector.
