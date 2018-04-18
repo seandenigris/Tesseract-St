@@ -1,14 +1,13 @@
 {
-	"category" : "Tesseract-UI",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"model" ],
-	"name" : "TeHocrLineMorph",
-	"pools" : [
-		 ],
 	"super" : "BorderedMorph",
-	"type" : "normal" }
+	"category" : "Tesseract-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model"
+	],
+	"name" : "TeHocrLineMorph",
+	"type" : "normal"
+}
