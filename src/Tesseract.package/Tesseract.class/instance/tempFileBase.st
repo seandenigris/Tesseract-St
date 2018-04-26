@@ -1,4 +1,4 @@
 private
 tempFileBase
 
-	^ tempFileBase.
+	^ tempFileBase ifNil: [ tempFileBase := Tempfile new ].

@@ -3,4 +3,4 @@ ocrCommand
 
 	| template |
 	template := '"{1}" "{2}" "{3}"'.
-	^ template format: { self executable fullName. self inputFile fullName. tempFileBase fullName }.
+	^ template format: { self executable fullName. self inputFile fullName. self tempFileBase fullName }.
