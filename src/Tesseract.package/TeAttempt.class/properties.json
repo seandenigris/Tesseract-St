@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Tesseract-Experimenting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"conversionCommand",
+		"result",
+		"result3"
+	],
+	"name" : "TeAttempt",
+	"type" : "normal"
+}
