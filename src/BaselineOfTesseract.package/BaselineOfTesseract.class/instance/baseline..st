@@ -12,7 +12,7 @@ baseline: spec
 						versionString: #stable;
 						repository: 'http://www.squeaksource.com/MetacelloRepository' ];
 				baseline: 'ResourcesLive' with: [
-					spec repository: 'github://seandenigris/ResourcesLive:master/repository' ];
+					spec repository: 'github://seandenigris/ResourcesLive:master/src' ];
 				baseline: 'Tempfile' with: [
 					spec repository: 'github://seandenigris/TempfileSt:master/repository' ].
 			spec
