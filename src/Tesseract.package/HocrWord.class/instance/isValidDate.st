@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isValidDate
 
-	^ self dateRule matches: self string.
+	^ Date parser matches: self string.

@@ -1,4 +1,4 @@
-as yet unclassified
+converting
 asMorph
 
 	^ TeHocrWordMorph on: self

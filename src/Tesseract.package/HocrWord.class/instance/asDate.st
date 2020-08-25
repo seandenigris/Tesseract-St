@@ -1,6 +1,4 @@
-as yet unclassified
+converting
 asDate
 
-	| parseResult |
-	parseResult := self dateRule parse: self string.
-	^ parseResult asDate
+	^ Date parser parse: self string.
