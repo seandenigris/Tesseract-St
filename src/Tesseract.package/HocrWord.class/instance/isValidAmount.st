@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isValidAmount
 
 	^ self amountRule matches: self string.
