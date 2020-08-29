@@ -1,9 +1,12 @@
 private
 evaluate: commandString
 
-	| p result |
-	p := PipeableOSProcess waitForCommand: commandString.
-	p succeeded ifFalse: [ ^ self error: 'tesseract failed with: ', p errorUpToEnd ].
+	| exitStatus result |
+	OSSUnixSubprocess new	
+	shellCommand: commandString;
+	"redirectStderr;"
+	runAndWaitOnExitDo: [ :command :outString :errString |
+		command isSuccess ifFalse: [ ^ self error: 'tesseract failed with: ', errString ]	].
 	result := self tempFile readStreamDo: [ :str | str contents ].
 	self tempFile delete.
 	^ result.
