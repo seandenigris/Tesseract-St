@@ -1,7 +1,6 @@
 *Tesseract-Core
 tesseractInputFile
-	| target commandTemplate command suffix |
-	suffix := '-000.tiff'.
-	target := Tempfile endingWith: suffix.
+	| target commandTemplate command |
+	target := Tempfile withSuffix: '-000.tiff'.
 	RlPdfToImageConverter convert: self file to: target.
 	^ target
