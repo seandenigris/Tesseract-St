@@ -1,11 +1,8 @@
 private
 executable
-
-	| homebrewLocation macPortsLocation |
-	homebrewLocation := '/usr/local/bin/tesseract' asFileReference.
-	homebrewLocation exists ifTrue: [ ^ homebrewLocation ].
-	
-	macPortsLocation := '/opt/local/bin/tesseract' asFileReference.
-	macPortsLocation exists ifTrue: [ ^ macPortsLocation ].
-	
-	^ self error: 'Tesseract not installed!'.
+	| reference |
+	"This is the location for both Homebrew and Macports"
+	reference := '/usr/local/bin/tesseract' asFileReference.
+	^ reference exists 
+		ifTrue: [ reference ]
+		ifFalse: [ self error: 'Tesseract not installed!' ]

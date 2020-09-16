@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 gtInspectorHocrLinesIn: composite
 	<gtInspectorPresentationOrder: 3>
 	^ composite table

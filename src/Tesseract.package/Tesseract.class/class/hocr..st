@@ -1,4 +1,4 @@
-as yet unclassified
+convenience
 hocr: aClient
 
 	^ self new

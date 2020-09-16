@@ -1,0 +1,1 @@
+''hOCR is an open standard of data representation for formatted text obtained from optical character recognition (OCR). The definition encodes text, style, layout information, recognition confidence metrics and other information using Extensible Markup Language (XML) in the form of Hypertext Markup Language (HTML) or XHTML.'' - *per Wikipedia>https://en.wikipedia.org/wiki/HOCR*

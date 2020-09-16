@@ -1,4 +1,4 @@
-as yet unclassified
+convencience
 ocr: aClient 
 
 	^ self new

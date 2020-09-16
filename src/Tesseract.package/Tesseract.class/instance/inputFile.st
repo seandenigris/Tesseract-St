@@ -1,4 +1,3 @@
 private
 inputFile
-
 	^ client tesseractInputFile
