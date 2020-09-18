@@ -1,0 +1,1 @@
+Do we need a pointer back to our container? One reason we might is if we wanted to show our position relative to the entire page we appear in. This info is available in the XML in the first div of the body, but let's wait and see if we actually want this info in practice.

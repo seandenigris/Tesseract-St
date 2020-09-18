@@ -1,6 +1,5 @@
 printing
 printOn: aStream
 
-	aStream
-		nextPutAll: self string;
-		nextPutAll: '(hocr)'.
+	self displayStringOn: aStream.
+	aStream nextPutAll: '(hocr)'.

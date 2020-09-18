@@ -1,4 +1,4 @@
-as yet unclassified
+GT-Pharo
 gtInspectorHocrWordsIn: composite
         <gtInspectorPresentationOrder: 5>
         ^ composite table
