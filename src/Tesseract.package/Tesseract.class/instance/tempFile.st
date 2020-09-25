@@ -1,4 +1,4 @@
 private
 tempFile
-
-	^ tempFileBase, tempFileExtension.
+	^ tempFile
+		ifNil: [ tempFile := Tempfile withSuffix: self tempFileExtension ]

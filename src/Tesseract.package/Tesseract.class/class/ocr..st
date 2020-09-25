@@ -3,4 +3,5 @@ ocr: aClient
 
 	^ self new
 		client: aClient;
-		ocr.
+		isHocr: false;
+		run.

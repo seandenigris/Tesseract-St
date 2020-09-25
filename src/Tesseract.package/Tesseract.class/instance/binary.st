@@ -1,5 +1,5 @@
 private
-executable
+binary
 	| reference |
 	"This is the location for both Homebrew and Macports"
 	reference := '/usr/local/bin/tesseract' asFileReference.

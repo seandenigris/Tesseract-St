@@ -1,7 +1,10 @@
-accessing
+examples
 exampleHOCR
 	<gtExample>
-	| hocr |
-	hocr := Tesseract hocr: RlPDF exampleReceipt.
-	self assert: (hocr words anySatisfy: [ :w | w string = 'CASH' ]).
-	^ hocr
+	| result |
+	result := Tesseract new
+		client: RlPDF exampleReceipt;
+		isHocr: true;
+		yourself.
+	"self assert: (hocr words anySatisfy: [ :w | w string = 'CASH' ])."
+	^ result

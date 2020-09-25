@@ -3,4 +3,5 @@ hocr: aClient
 
 	^ self new
 		client: aClient;
-		hocr.
+		isHocr: true;
+		run.

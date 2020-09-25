@@ -1,14 +1,15 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "Object",
+	"super" : "SuGenericUnixCommand",
 	"category" : "Tesseract-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"tempFileBase",
-		"tempFileExtension",
-		"client"
+		"client",
+		"inputFile",
+		"isHocr",
+		"tempFile"
 	],
 	"name" : "Tesseract",
 	"type" : "normal"
