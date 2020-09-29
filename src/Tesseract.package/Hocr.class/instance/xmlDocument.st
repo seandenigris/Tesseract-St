@@ -5,6 +5,4 @@ xmlDocument
 	xmlDocument ifNotNil: [ ^ xmlDocument ].
 	
 	parser := XMLDOMParser on: string.
-	^ xmlDocument := parser
-		resolvesExternalEntities: false;
-		parseDocument.
+	^ xmlDocument := parser parseDocument.
