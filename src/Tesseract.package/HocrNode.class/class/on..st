@@ -1,6 +1,6 @@
 instance creation
-on: aXMLElement 
+on: convertibleToXMLElement 
 
 	^ self new
-		xmlElement: aXMLElement;
+		xmlElement: convertibleToXMLElement teAsXMLElement;
 		yourself.

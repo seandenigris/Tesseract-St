@@ -1,5 +1,12 @@
-views
+*Tesseract-Bloc
 asElementWithLabels
+	| text box |
+	text := text := BlTextElement new
+	text: self string asRopedText; asScalableElement.
+	box := self asElement
+		addChild: text;
+		yourself.
+	
 	^ BlElement new
 		layout: (BlGridLayout horizontal columnCount: 3);
 		constraintsDo: [ :c | 
@@ -14,7 +21,7 @@ asElementWithLabels
 
 			"middle row"
 			(self textElementForDimension: self boundingBox height alignV: #alignCenter alignH: #alignRight).
-			self asElement.
+			box.
 			(self textElementForDimension: self boundingBox height alignV: #alignCenter alignH: #alignLeft).
 
 			"bottom row"
