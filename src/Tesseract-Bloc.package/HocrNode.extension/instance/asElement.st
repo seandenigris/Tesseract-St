@@ -10,5 +10,5 @@ asElement
 		border: (BlBorder paint: Color red width: 1);
 		look: (BrGlamorousWithTooltipLook2 content: tip);
 		size: self boundingBox extent;
-		relocate: self boundingBox center;
+		relocate: self boundingBox topLeft;
 		yourself
