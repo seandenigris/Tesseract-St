@@ -9,7 +9,8 @@
 		"client",
 		"inputFile",
 		"isHocr",
-		"tempFile"
+		"tempFile",
+		"characterWhitelist"
 	],
 	"name" : "Tesseract",
 	"type" : "normal"

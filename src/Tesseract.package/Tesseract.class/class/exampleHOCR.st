@@ -6,5 +6,5 @@ exampleHOCR
 		client: RlPDF exampleReceipt;
 		isHocr: true;
 		yourself.
-	"self assert: (hocr words anySatisfy: [ :w | w string = 'CASH' ])."
+	self assert: (result run words anySatisfy: [ :e | e string = '12-43' ]).
 	^ result
