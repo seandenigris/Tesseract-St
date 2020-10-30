@@ -1,3 +1,6 @@
 *Tesseract-Core
 tesseractInputFile
-	^ self file
+	| target |
+	target := Tempfile withSuffix: '.tiff'.
+	RlImageMagick teConvert: self file to: target.
+	^ target

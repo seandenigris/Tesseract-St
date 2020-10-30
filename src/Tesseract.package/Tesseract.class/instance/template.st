@@ -1,3 +1,3 @@
 accessing
 template
-	^ self binary fullName surroundedByDoubleQuotes, '{flags} "{inputFile}" "{outputFile}"{hOCR}'
+	^ self binary fullName surroundedByDoubleQuotes, ' {inputFile} {outputFile} {flags} {hOCR}'

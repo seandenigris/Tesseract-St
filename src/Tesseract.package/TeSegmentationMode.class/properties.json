@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Tesseract-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"code",
+		"description"
+	],
+	"name" : "TeSegmentationMode",
+	"type" : "normal"
+}

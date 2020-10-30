@@ -10,7 +10,10 @@
 		"inputFile",
 		"isHocr",
 		"tempFile",
-		"characterWhitelist"
+		"characterWhitelist",
+		"userPatterns",
+		"userPatternsFile",
+		"segmentationMode"
 	],
 	"name" : "Tesseract",
 	"type" : "normal"

@@ -1,3 +1,3 @@
 accessing
-characterWhitelist: aCollection
-	characterWhitelist := aCollection
+characterWhitelist: aString
+	characterWhitelist := aString
