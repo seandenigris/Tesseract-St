@@ -4,7 +4,7 @@ example_WordFuzzy
 	| result expectedOCR |
 	expectedOCR := '12.43'.
 	result := Tesseract new
-		client: RlJpeg tesseractExampleWordFuzzy;
+		client: RlJPEG tesseractExampleWordFuzzy;
 		segmentationMode: TeSegmentationMode word;
 		isHocr: false;
 		yourself.
