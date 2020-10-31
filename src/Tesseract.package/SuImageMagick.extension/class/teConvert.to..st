@@ -2,6 +2,6 @@
 teConvert: inputFile to: outputFile
 	^ self convertForOCR
 		argumentSource: { 
-			#input -> inputFile.
-			#output -> outputFile } asDictionary;
+			#inputFile -> inputFile.
+			#outputFile -> outputFile } asDictionary;
 		run

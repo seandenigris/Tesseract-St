@@ -2,5 +2,5 @@
 tesseractInputFile
 	| target |
 	target := Tempfile withSuffix: '.tiff'.
-	RlImageMagick teConvert: self file to: target.
+	SuImageMagick teConvert: self file to: target.
 	^ target
