@@ -1,6 +1,8 @@
 baseline
 baseline: spec
 	<baseline>
+	| tesseractBaseDeps |
+	tesseractBaseDeps := #('Magritte' "'ResourcesLive'" 'Superuser' 'Tempfile').
 	spec for: #common do: [
 		spec
 			baseline: 'Magritte' with: [
@@ -13,9 +15,12 @@ baseline: spec
 			baseline: 'Tempfile' with: [
 				spec repository: 'github://seandenigris/TempfileSt' ].
 		spec
-			package: 'Tesseract'
-				with: [ spec requires: #('Magritte' 'OSSubprocess' "'ResourcesLive'" 'Superuser' 'Tempfile') ] ].
+			package: 'Tesseract' with: [ 
+				spec requires: tesseractBaseDeps copyWith: 'OSSubprocess' ] ].
 				
 	spec for: #GToolkit do: [
 		spec removeProject: 'OSSubprocess'.
-		spec package: 'Tesseract-Bloc' with: [ spec requires: #('Tesseract') ] ]
+		spec 
+			package: 'Tesseract' overrides: [ 
+				spec requires: tesseractBaseDeps ];
+			package: 'Tesseract-Bloc' with: [ spec requires: #('Tesseract') ] ]
