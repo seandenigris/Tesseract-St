@@ -16,7 +16,7 @@ baseline: spec
 				spec repository: 'github://seandenigris/TempfileSt' ].
 		spec
 			package: 'Tesseract' with: [ 
-				spec requires: tesseractBaseDeps copyWith: 'OSSubprocess' ] ].
+				spec requires: (tesseractBaseDeps copyWith: 'OSSubprocess') ] ].
 				
 	spec for: #GToolkit do: [
 		spec removeProject: 'OSSubprocess'.
