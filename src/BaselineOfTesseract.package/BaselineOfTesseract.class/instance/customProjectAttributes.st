@@ -1,5 +1,5 @@
 accessing
 customProjectAttributes
 	^ self isGTImage
-			ifFalse: [ #() ]
+			ifFalse: [ #(notGToolkit) ]
 			ifTrue: [ #(GToolkit) ]
