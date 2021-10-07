@@ -1,1 +1,0 @@
-SystemOrganization addCategory: #'Tesseract-Bloc'!

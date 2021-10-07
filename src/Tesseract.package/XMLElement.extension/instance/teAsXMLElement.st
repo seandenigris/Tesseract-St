@@ -1,3 +1,0 @@
-*Tesseract
-teAsXMLElement
-	^ self.

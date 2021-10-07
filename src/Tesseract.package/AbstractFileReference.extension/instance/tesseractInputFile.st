@@ -1,4 +1,0 @@
-*Tesseract
-tesseractInputFile
-
-	^ self
