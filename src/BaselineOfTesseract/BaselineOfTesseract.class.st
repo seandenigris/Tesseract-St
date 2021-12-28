@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfTesseract,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfTesseract'
+	#category : #BaselineOfTesseract
 }
 
 { #category : #accessing }
@@ -47,5 +47,7 @@ BaselineOfTesseract >> customProjectAttributes [
 
 { #category : #testing }
 BaselineOfTesseract >> isGTImage [
-	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
+	
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ].
+	"Implementation note: used to check for GToolkit prefix, but P7 has a GToolkit-Examples package. Lepiter, OTOH, could only be loaded in a GT image"
 ]
