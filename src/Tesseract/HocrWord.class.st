@@ -44,16 +44,6 @@ HocrWord class >> exampleInput2 [
 	^ '<span class="ocrx_word" id="word_1_39" title="bbox 127 61 227 98; x_wconf 58">Subtotal</span>'
 ]
 
-{ #category : #examples }
-HocrWord class >> exampleTwoWordsInSitu [
-	<gtExample>
-	^ BlElement new
-		size: 1000 @ 1000;
-		addChild: self exampleFromString asElement;
-		addChild: self exampleFromString2 asElement;
-		yourself
-]
-
 { #category : #'as yet unclassified' }
 HocrWord >> amountRule [
 
