@@ -3,12 +3,12 @@ HocrBrowser openOn: VsReceiptFile uniqueInstance receipts atRandom.
 "
 Class {
 	#name : #HocrBrowser,
-	#superclass : #ComposableModel,
+	#superclass : #SpPresenter,
 	#instVars : [
 		'list',
 		'receipt'
 	],
-	#category : 'Tesseract-Core'
+	#category : #'Tesseract-Core'
 }
 
 { #category : #opening }
