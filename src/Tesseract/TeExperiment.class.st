@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'current'
 	],
-	#category : 'Tesseract-Experimenting'
+	#category : #'Tesseract-Experimenting'
 }
 
 { #category : #accessing }
@@ -34,11 +34,6 @@ TeExperiment >> descriptionSubjects [
 		accessor: #subjects;
 		default: #();
 		priority: 100;
-		glmPresentation: [ :a |
-			a list
-				"title: 'Lines';"
-				"display: [ self lines ];
-				column: 'Value' evaluated: #string" ];
 		yourself
 ]
 
