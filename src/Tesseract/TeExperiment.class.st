@@ -25,8 +25,13 @@ TeExperiment >> addFiles: aCollection [
 		self subjects add: subject ]
 ]
 
+{ #category : #accessing }
+TeExperiment >> subjects [
+	^ subjects ifNil: [ subjects := OrderedCollection new ]
+]
+
 { #category : #'accessing-magritte' }
-TeExperiment >> descriptionSubjects [
+TeExperiment >> subjectsDescription [
 	<magritteDescription>
 	<gtInspectorPresentationOrder: 3>
 
@@ -35,9 +40,4 @@ TeExperiment >> descriptionSubjects [
 		default: #();
 		priority: 100;
 		yourself
-]
-
-{ #category : #accessing }
-TeExperiment >> subjects [
-	^ subjects ifNil: [ subjects := OrderedCollection new ]
 ]
