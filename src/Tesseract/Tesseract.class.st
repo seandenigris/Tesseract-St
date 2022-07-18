@@ -35,8 +35,13 @@ Class {
 		'userPatternsFile',
 		'segmentationMode'
 	],
-	#category : 'Tesseract-Core'
+	#category : #'Tesseract-Core'
 }
+
+{ #category : #private }
+Tesseract class >> binaryName [
+	^ 'tesseract'
+]
 
 { #category : #examples }
 Tesseract class >> exampleCharacterWhitelist [
@@ -174,14 +179,9 @@ Tesseract >> argumentSource [
 		#hOCR -> (self isHocr ifTrue: [ 'hocr' ] ifFalse: [ '' ]) } asDictionary
 ]
 
-{ #category : #private }
+{ #category : #accessing }
 Tesseract >> binary [
-	| reference |
-	"This is the location for both Homebrew and Macports"
-	reference := '/usr/local/bin/tesseract' asFileReference.
-	^ reference exists 
-		ifTrue: [ reference ]
-		ifFalse: [ self error: 'Tesseract not installed!' ]
+	^ self class binary
 ]
 
 { #category : #accessing }
