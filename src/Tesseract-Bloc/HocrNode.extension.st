@@ -2,20 +2,17 @@ Extension { #name : #HocrNode }
 
 { #category : #'*Tesseract-Bloc' }
 HocrNode >> asElement [
-
 	| tip result |
 	tip := BrLabel new
-		       aptitude:
-			       BrGlamorousLabelAptitude new glamorousRegularFontAndSize;
-		       padding: (BlInsets all: 2);
-		       text: self string;
-		       alignCenter.
+			aptitude: BrGlamorousLabelAptitude new glamorousRegularFontAndSize;
+			padding: (BlInsets all: 2);
+			text: self string;
+			alignCenter.
 	result := BlElement new
-		          look: (BrGlamorousWithTooltipAptitude content: tip);
-		          size: self boundingBox extent;
-		          relocate: self boundingBox topLeft;
-		          yourself.
-	"border: (BlBorder paint: Color red width: 1);
+			aptitude: (BrGlamorousWithTooltipAptitude content: tip);
+			size: self boundingBox extent;
+			relocate: self boundingBox topLeft;
+			yourself.	"border: (BlBorder paint: Color red width: 1);
 		"
 	result userData at: #node put: self.
 	^ result

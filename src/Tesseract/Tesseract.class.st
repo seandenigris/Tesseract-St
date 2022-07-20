@@ -281,7 +281,7 @@ Tesseract >> tempFileExtension [
 
 { #category : #accessing }
 Tesseract >> template [
-	^ self binary fullName surroundedByDoubleQuotes, ' {inputFile} {outputFile} {flags} {hOCR}'
+	^ self binary surroundedByDoubleQuotes, ' {inputFile} {outputFile} {flags} {hOCR}'
 ]
 
 { #category : #accessing }
