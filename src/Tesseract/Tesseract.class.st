@@ -243,7 +243,7 @@ Tesseract >> isHocr: aBoolean [
 
 { #category : #private }
 Tesseract >> run [
-	| exitStatus result |
+	| result |
 	OSSUnixSubprocess new
 		shellCommand: self string;
 		redirectStderr;
