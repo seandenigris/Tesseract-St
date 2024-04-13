@@ -1,7 +1,7 @@
 Class {
 	#name : #HocrWord,
 	#superclass : #HocrNode,
-	#category : 'Tesseract-Core'
+	#category : #'Tesseract-Core'
 }
 
 { #category : #accessing }
@@ -64,7 +64,7 @@ HocrWord >> asAmount [
 { #category : #converting }
 HocrWord >> asDate [
 
-	^ Date parser parse: self string.
+	^ Date pp2Parser parse: self string.
 ]
 
 { #category : #converting }
