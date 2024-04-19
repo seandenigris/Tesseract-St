@@ -8,8 +8,5 @@ RlPNG class >> tesseractExampleWord [
 
 { #category : #'*Tesseract-Core' }
 RlPNG >> tesseractInputFile [
-	| target |
-	target := Tempfile withSuffix: '.tiff'.
-	SuImageMagick teConvert: self to: target.
-	^ target
+	^ self file
 ]
