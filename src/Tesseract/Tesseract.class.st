@@ -243,17 +243,16 @@ Tesseract >> isHocr: aBoolean [
 
 { #category : #private }
 Tesseract >> run [
-	| result |
-	OSSUnixSubprocess new
-		shellCommand: self string;
-		redirectStderr;
-		runAndWaitOnExitDo: [ :command :outString :errString | 
-			command isSuccess
+	| outputString |
+	OSShell new
+		shellCommand: self string
+		runAndWaitOnExitDo: [ :result :outString :errString | 
+			result isSuccess
 				ifFalse: [ self error: 'tesseract failed with: ' , errString ] ].
-	result := self tempFile readStreamDo: [ :str | str contents ].
+	outputString := self tempFile readStreamDo: [ :str | str contents ].
 	^ self isHocr
-		ifTrue: [ client teNewHocrFrom: result ]
-		ifFalse: [ result ]
+		ifTrue: [ client teNewHocrFrom: outputString ]
+		ifFalse: [ outputString ]
 ]
 
 { #category : #accessing }
