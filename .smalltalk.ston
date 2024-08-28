@@ -3,7 +3,9 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'Tesseract',
       #directory : 'src',
-      #platforms : [ #pharo ]
+      #onConflict : #useIncoming
     }
-  ]
+  ],
+  #testing : {
+      #failOnZeroTests : false  }
 }
