@@ -14,23 +14,23 @@ BaselineOfTesseract >> baseline: spec [
 	<baseline>
 	spec for: #common do: [
 		spec
-			baseline: 'Magritte' with: [
+			baseline: #'Magritte' with: [
 				spec repository: 'github://seandenigris/Magritte' ];
-			baseline: 'OSShell' with: [ "Cross-platform process handling on Pharo and GT"
+			baseline: #'OSShell' with: [ "Cross-platform process handling on Pharo and GT"
 				spec repository: 'github://seandenigris/Pharo-Shell' ];
 			"baseline: 'ResourcesLive' with: [
 				spec repository: 'github://seandenigris/ResourcesLive' ];"
-			baseline: 'Superuser' with: [
+			baseline: #'Superuser' with: [
 				spec repository: 'github://seandenigris/Superuser' ];
-			baseline: 'Tempfile' with: [
+			baseline: #'Tempfile' with: [
 				spec repository: 'github://seandenigris/TempfileSt' ].
 		spec
-			package: 'Tesseract' with: [ 
-				spec requires: #('Magritte' #'OSShell' "'ResourcesLive'" 'Superuser' 'Tempfile') ] ].
+			package: #'Tesseract' with: [ 
+				spec requires: #(Magritte #'OSShell' "'ResourcesLive'" Superuser Tempfile) ] ].
 				
 	spec for: #GToolkit do: [
 		spec 
-			package: 'Tesseract-Bloc' with: [ spec requires: #('Tesseract') ] ]
+			package: #'Tesseract-Bloc' with: [ spec requires: #(Tesseract) ] ]
 
 ]
 
