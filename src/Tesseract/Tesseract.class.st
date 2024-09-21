@@ -164,10 +164,13 @@ Tesseract class >> newHocr [
 { #category : #convencience }
 Tesseract class >> ocr: aClient [ 
 
-	^ self new
+	^ [ self new
 		client: aClient;
 		isHocr: false;
-		run.
+		run 
+	]
+		on: Error
+		do: [ '' ].
 ]
 
 { #category : #accessing }
