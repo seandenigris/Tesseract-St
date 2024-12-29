@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : 'Tesseract-UI'
+	#category : #'Tesseract-UI'
 }
 
 { #category : #'instance creation' }
@@ -19,9 +19,9 @@ TeHocrLineMorph class >> on: line [
 TeHocrLineMorph >> extractAmount [
 
 	| number dollars cents amountRule parseResult |
-	dollars := number := #digit asParser plus flatten.
-	cents := $. asParser, number.
-	amountRule := $$ asParser optional, (dollars, cents optional) flatten end ==> #second.
+	dollars := number := #digit asPParser plus flatten.
+	cents := $. asPParser, number.
+	amountRule := $$ asPParser optional, (dollars, cents optional) flatten end ==> #second.
 	self model words detect: [ :w | 
 		parseResult := amountRule parse: w string.
 		parseResult isPetitFailure not ].
@@ -32,8 +32,8 @@ TeHocrLineMorph >> extractAmount [
 TeHocrLineMorph >> extractDate [
 
 	| separator number dateRule parseResult |
-	separator := $/ asParser.
-	number := #digit asParser star flatten.
+	separator := $/ asPParser.
+	number := #digit asPParser star flatten.
 	dateRule := (number, separator, number, separator, number) flatten.
 	self model words detect: [ :w | 
 		parseResult := dateRule parse: w string.

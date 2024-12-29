@@ -48,9 +48,9 @@ HocrWord class >> exampleInput2 [
 HocrWord >> amountRule [
 
 	| number dollars cents |
-	dollars := number := #digit asParser plus flatten.
-	cents := $. asParser, number.
-	^ $$ asParser optional, (dollars, cents optional) flatten end ==> #second.
+	dollars := number := #digit asPParser plus flatten.
+	cents := $. asPParser, number.
+	^ $$ asPParser optional, (dollars, cents optional) flatten end ==> #second.
 ]
 
 { #category : #converting }

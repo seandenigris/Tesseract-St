@@ -28,10 +28,17 @@ BaselineOfTesseract >> baseline: spec [
 			package: #'Tesseract' with: [ 
 				spec requires: #(Magritte #'OSShell' "'ResourcesLive'" Superuser Tempfile) ] ].
 				
+	spec for: #notGToolkit do: [
+		spec 
+			baseline: #'PetitParser2' with: [
+				spec repository: 'github://seandenigris/PetitParser2' ].
+		spec 
+			package: #'Tesseract' with: [ 
+				spec requires: #(#'PetitParser2') ] ].
+				
 	spec for: #GToolkit do: [
 		spec 
 			package: #'Tesseract-Bloc' with: [ spec requires: #(Tesseract) ] ]
-
 ]
 
 { #category : #accessing }
