@@ -1,6 +1,6 @@
-Extension { #name : #HocrWord }
+Extension { #name : 'HocrWord' }
 
-{ #category : #'*Tesseract-Bloc' }
+{ #category : '*Tesseract-Bloc' }
 HocrWord class >> exampleTwoWordsInSitu [
 	<gtExample>
 	^ BlElement new

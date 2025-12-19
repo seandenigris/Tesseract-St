@@ -1,13 +1,15 @@
 Class {
-	#name : #TeHocrLineMorph,
-	#superclass : #BorderedMorph,
+	#name : 'TeHocrLineMorph',
+	#superclass : 'BorderedMorph',
 	#instVars : [
 		'model'
 	],
-	#category : #'Tesseract-UI'
+	#category : 'Tesseract-UI',
+	#package : 'Tesseract',
+	#tag : 'UI'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 TeHocrLineMorph class >> on: line [
 
 	^ self new
@@ -15,7 +17,7 @@ TeHocrLineMorph class >> on: line [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrLineMorph >> extractAmount [
 
 	| number dollars cents amountRule parseResult |
@@ -28,7 +30,7 @@ TeHocrLineMorph >> extractAmount [
 	^ UIManager default inform: parseResult asNumber
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrLineMorph >> extractDate [
 
 	| separator number dateRule parseResult |
@@ -41,37 +43,37 @@ TeHocrLineMorph >> extractDate [
 	^ UIManager default inform: parseResult asDate
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrLineMorph >> handlesMouseDown: anEvent [
 
 	^ true
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TeHocrLineMorph >> initialize [
 
 	super initialize.
 	self color: Color transparent.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeHocrLineMorph >> model [
 	^ model
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeHocrLineMorph >> model: anObject [
 	model := anObject.
 	self bounds: model boundingBox
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrLineMorph >> mouseDown: evt [
 
 	evt yellowButtonPressed ifTrue: [ self showContextMenu ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrLineMorph >> showContextMenu [
 
 	| menu |

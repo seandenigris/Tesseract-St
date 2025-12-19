@@ -1,6 +1,6 @@
-Extension { #name : #RlTiff }
+Extension { #name : 'RlTiff' }
 
-{ #category : #'*Tesseract-Core' }
+{ #category : '*Tesseract-Core' }
 RlTiff >> tesseractInputFile [
 	^ self file
 ]

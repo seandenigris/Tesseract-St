@@ -1,21 +1,23 @@
 Class {
-	#name : #TeExperiment,
-	#superclass : #Object,
+	#name : 'TeExperiment',
+	#superclass : 'Object',
 	#instVars : [
 		'subjects'
 	],
 	#classInstVars : [
 		'current'
 	],
-	#category : #'Tesseract-Experimenting'
+	#category : 'Tesseract-Experimenting',
+	#package : 'Tesseract',
+	#tag : 'Experimenting'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeExperiment class >> current [
 	^ current ifNil: [ current := self new ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeExperiment >> addFiles: aCollection [ 
 	aCollection do: [ :e |
 		| subject |
@@ -25,12 +27,12 @@ TeExperiment >> addFiles: aCollection [
 		self subjects add: subject ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeExperiment >> subjects [
 	^ subjects ifNil: [ subjects := OrderedCollection new ]
 ]
 
-{ #category : #'accessing-magritte' }
+{ #category : 'accessing-magritte' }
 TeExperiment >> subjectsDescription [
 	<magritteDescription>
 	<gtInspectorPresentationOrder: 3>

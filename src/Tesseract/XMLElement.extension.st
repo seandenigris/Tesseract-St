@@ -1,6 +1,6 @@
-Extension { #name : #XMLElement }
+Extension { #name : 'XMLElement' }
 
-{ #category : #'*Tesseract' }
+{ #category : '*Tesseract' }
 XMLElement >> teAsXMLElement [
 	^ self.
 ]

@@ -1,1 +1,1 @@
-Package { #name : #Tesseract }
+Package { #name : 'Tesseract' }

@@ -1,6 +1,6 @@
-Extension { #name : #RlPDF }
+Extension { #name : 'RlPDF' }
 
-{ #category : #'*Tesseract-Core' }
+{ #category : '*Tesseract-Core' }
 RlPDF >> tesseractInputFile [
 	| target |
 	target := Tempfile withSuffix: '.tiff'.

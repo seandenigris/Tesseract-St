@@ -1,14 +1,16 @@
 Class {
-	#name : #TeSegmentationMode,
-	#superclass : #Object,
+	#name : 'TeSegmentationMode',
+	#superclass : 'Object',
 	#instVars : [
 		'code',
 		'description'
 	],
-	#category : 'Tesseract-Core'
+	#category : 'Tesseract-Core',
+	#package : 'Tesseract',
+	#tag : 'Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 TeSegmentationMode class >> block [
 	^ self new
 		code: 6;
@@ -16,7 +18,7 @@ TeSegmentationMode class >> block [
 		yourself.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 TeSegmentationMode class >> line [
 	^ self new
 		code: 7;
@@ -24,7 +26,7 @@ TeSegmentationMode class >> line [
 		yourself.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 TeSegmentationMode class >> word [
 	^ self new
 		code: 8;
@@ -32,22 +34,22 @@ TeSegmentationMode class >> word [
 		yourself.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeSegmentationMode >> code [
 	^ code
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeSegmentationMode >> code: anObject [
 	code := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeSegmentationMode >> description [
 	^ description
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeSegmentationMode >> description: anObject [
 	description := anObject
 ]

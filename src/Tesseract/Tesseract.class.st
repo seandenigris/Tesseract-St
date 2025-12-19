@@ -23,8 +23,8 @@ In general:
 # *https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html*
 "
 Class {
-	#name : #Tesseract,
-	#superclass : #SuGenericUnixCommand,
+	#name : 'Tesseract',
+	#superclass : 'SuGenericUnixCommand',
 	#instVars : [
 		'client',
 		'inputFile',
@@ -35,15 +35,17 @@ Class {
 		'userPatternsFile',
 		'segmentationMode'
 	],
-	#category : #'Tesseract-Core'
+	#category : 'Tesseract-Core',
+	#package : 'Tesseract',
+	#tag : 'Core'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract class >> binaryName [
 	^ 'tesseract'
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> exampleCharacterWhitelist [
 	<gtExample>
 	| result |
@@ -58,12 +60,12 @@ Tesseract class >> exampleCharacterWhitelist [
 	^ result
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract class >> exampleSupportFolder [
 	^ BaselineOfTesseract exampleSupportFolder
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> exampleUserPattern [
 	"<gtExample> Failing, but may be an issue with Tesseract. There are many issues about this not working"
 	| result hocr |
@@ -77,7 +79,7 @@ Tesseract class >> exampleUserPattern [
 	^ result
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> example_Word [
 	<gtExample>
 	| result expectedOCR |
@@ -95,7 +97,7 @@ Tesseract class >> example_Word [
 	^ result
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> example_WordFuzzy [
 	<gtExample>
 	| result expectedOCR |
@@ -119,7 +121,7 @@ Tesseract class >> example_WordFuzzy [
 	^ result
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> example_hOCR_Convenience [
 	<gtExample>
 	| hocr |
@@ -128,7 +130,7 @@ Tesseract class >> example_hOCR_Convenience [
 	^ hocr
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract class >> examplehOCR [
 	<gtExample>
 	| result |
@@ -139,7 +141,7 @@ Tesseract class >> examplehOCR [
 	^ result
 ]
 
-{ #category : #convenience }
+{ #category : 'convenience' }
 Tesseract class >> hocr: aClient [
 
 	^ self new
@@ -148,12 +150,12 @@ Tesseract class >> hocr: aClient [
 		run.
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 Tesseract class >> initialize [
 	Smalltalk tools register: self as: #ocr
 ]
 
-{ #category : #convenience }
+{ #category : 'convenience' }
 Tesseract class >> newHocr [
 
 	^ self new
@@ -161,7 +163,7 @@ Tesseract class >> newHocr [
 		yourself.
 ]
 
-{ #category : #convencience }
+{ #category : 'convencience' }
 Tesseract class >> ocr: aClient [ 
 
 	^ [ self new
@@ -173,7 +175,7 @@ Tesseract class >> ocr: aClient [
 		do: [ '' ].
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> argumentSource [
 	^ { 
 		#flags -> self flagString.
@@ -182,34 +184,34 @@ Tesseract >> argumentSource [
 		#hOCR -> (self isHocr ifTrue: [ 'hocr' ] ifFalse: [ '' ]) } asDictionary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> binary [
 	^ self class binary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> characterWhitelist [
 	^ characterWhitelist ifNil: [ characterWhitelist := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> characterWhitelist: aString [
 	characterWhitelist := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> client [
 	^ client ifNil: [ self ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract >> client: aTesseractClient [
 	"See my class comment"
 
 	client := aTesseractClient
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> flagString [
 	^ String streamContents: [ :str |
 		
@@ -227,24 +229,24 @@ Tesseract >> flagString [
 			str nextPutAll: '--psm ', psm code suForCommand ] ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract >> inputFile [
 	"Cache because the client may be creating a file just for me, and it may be a Tempfile (which we don't want to be garbage collected before we're done)"
 	^ inputFile ifNil: [ inputFile := self client tesseractInputFile ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> isHocr [
 	^ isHocr ifNil: [ true ]
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 Tesseract >> isHocr: aBoolean [
 	"Otherwise I will create plain text OCR without style info"
 	isHocr := aBoolean
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract >> run [
 	| outputString |
 	OSShell new
@@ -258,40 +260,40 @@ Tesseract >> run [
 		ifFalse: [ outputString ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> segmentationMode [
 	^ segmentationMode
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> segmentationMode: anObject [
 	segmentationMode := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract >> tempFile [
 	^ tempFile
 		ifNil: [ tempFile := Tempfile withSuffix: self tempFileExtension ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Tesseract >> tempFileExtension [
 	^ self isHocr
 		ifTrue: [ '.hocr' ]
 		ifFalse: [ '.txt' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> template [
 	^ self binary surroundedByDoubleQuotes, ' {inputFile} {outputFile} {flags} {hOCR}'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> userPatterns [
 	^ userPatterns ifNil: [ userPatterns := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> userPatterns: aCollection [
 	"From https://github.com/tesseract-ocr/tesseract/blob/5761880676639ba6845dfcfc03f9c8989c9aa23b/src/dict/trie.h#L187 (add_word_list method comment):
 	// Each pattern can contain any non-whitespace characters, however only the
@@ -335,7 +337,7 @@ Tesseract >> userPatterns: aCollection [
 	userPatterns := aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Tesseract >> userPatternsFile [
 	userPatternsFile ifNil: [ userPatternsFile := Tempfile new ensureCreateFile].
 	userPatternsFile writeStreamDo: [ :s |

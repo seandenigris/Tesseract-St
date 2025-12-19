@@ -1,6 +1,6 @@
-Extension { #name : #HocrLine }
+Extension { #name : 'HocrLine' }
 
-{ #category : #'*Tesseract-Bloc' }
+{ #category : '*Tesseract-Bloc' }
 HocrLine class >> exampleInSitu [
 	<gtExample>
 	^ BlElement new

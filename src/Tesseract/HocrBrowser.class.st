@@ -2,16 +2,18 @@
 HocrBrowser openOn: VsReceiptFile uniqueInstance receipts atRandom.
 "
 Class {
-	#name : #HocrBrowser,
-	#superclass : #SpPresenter,
+	#name : 'HocrBrowser',
+	#superclass : 'SpPresenter',
 	#instVars : [
 		'list',
 		'receipt'
 	],
-	#category : #'Tesseract-Core'
+	#category : 'Tesseract-Core',
+	#package : 'Tesseract',
+	#tag : 'Core'
 }
 
-{ #category : #opening }
+{ #category : 'opening' }
 HocrBrowser class >> on: aVsReceipt [ 
 
 	^ self new
@@ -19,7 +21,7 @@ HocrBrowser class >> on: aVsReceipt [
 		yourself.
 ]
 
-{ #category : #opening }
+{ #category : 'opening' }
 HocrBrowser class >> openOn: aVsReceipt [ 
 
 	| instance |
@@ -27,7 +29,7 @@ HocrBrowser class >> openOn: aVsReceipt [
 	^ instance openWithSpec.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 HocrBrowser class >> spec [
 	<spec: #default>
 
@@ -36,13 +38,13 @@ HocrBrowser class >> spec [
 			yourself.
 ]
 
-{ #category : #specs }
+{ #category : 'specs' }
 HocrBrowser class >> title [
 
 	^ ''.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 HocrBrowser >> initializeWidgets [
 
 	self instantiateModels: #(
@@ -55,19 +57,19 @@ HocrBrowser >> initializeWidgets [
 		enabled: false."
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 HocrBrowser >> list [
 
 	^ list.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 HocrBrowser >> receipt [
 	
 	^ receipt.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 HocrBrowser >> receipt: aVsReceipt [ 
 
 	receipt := aVsReceipt.

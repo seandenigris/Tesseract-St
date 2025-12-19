@@ -1,6 +1,6 @@
-Extension { #name : #SuImageMagick }
+Extension { #name : 'SuImageMagick' }
 
-{ #category : #'*Tesseract' }
+{ #category : '*Tesseract' }
 SuImageMagick class >> teConvert: inputFile to: outputFile [
 	^ self convertForOCR
 		argumentAt: #inputFile put: inputFile;

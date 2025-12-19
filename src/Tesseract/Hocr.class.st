@@ -2,16 +2,18 @@
 ''hOCR is an open standard of data representation for formatted text obtained from optical character recognition (OCR). The definition encodes text, style, layout information, recognition confidence metrics and other information using Extensible Markup Language (XML) in the form of Hypertext Markup Language (HTML) or XHTML.'' - *per Wikipedia>https://en.wikipedia.org/wiki/HOCR*
 "
 Class {
-	#name : #Hocr,
-	#superclass : #Object,
+	#name : 'Hocr',
+	#superclass : 'Object',
 	#instVars : [
 		'string',
 		'xmlDocument'
 	],
-	#category : 'Tesseract-Core'
+	#category : 'Tesseract-Core',
+	#package : 'Tesseract',
+	#tag : 'Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Hocr class >> on: aString [
 
 	^ self new
@@ -19,7 +21,7 @@ Hocr class >> on: aString [
 		yourself.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Hocr >> exampleInput [
 	^ '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -44,7 +46,7 @@ Hocr >> exampleInput [
 '
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Hocr >> gtInspectorHocrLinesIn: composite [
 	<gtInspectorPresentationOrder: 3>
 	^ composite table
@@ -53,7 +55,7 @@ Hocr >> gtInspectorHocrLinesIn: composite [
 		column: 'Value' evaluated: #string
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Hocr >> gtInspectorHocrWordsIn: composite [
 	<gtInspectorPresentationOrder: 6>
 	^ composite table
@@ -62,7 +64,7 @@ Hocr >> gtInspectorHocrWordsIn: composite [
 		column: 'Value' evaluated: #string
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Hocr >> gtLinesFor: aView [
 	<gtView>
 	^ aView list
@@ -72,7 +74,7 @@ Hocr >> gtLinesFor: aView [
 			itemText: [ :line | line string ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Hocr >> gtWordsFor: aView [
 	<gtView>
 	^ aView list
@@ -82,7 +84,7 @@ Hocr >> gtWordsFor: aView [
 			itemText: [ :line | line string ]
 ]
 
-{ #category : #protocol }
+{ #category : 'protocol' }
 Hocr >> lines [
 
 	| lineNodes |
@@ -90,30 +92,30 @@ Hocr >> lines [
 	^ lineNodes collect: [ :e | self newLineFrom: e ].
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Hocr >> newLineFrom: anXmlElement [
 
 	^ HocrLine on: anXmlElement
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Hocr >> string [
 	^ string
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Hocr >> string: aWideString [ 
 
 	string := aWideString.
 ]
 
-{ #category : #protocol }
+{ #category : 'protocol' }
 Hocr >> words [
 
 	^ self lines flatCollect: [ :l | l words ]
 ]
 
-{ #category : #protocol }
+{ #category : 'protocol' }
 Hocr >> xmlDocument [
 
 	| parser |

@@ -1,6 +1,6 @@
-Extension { #name : #AbstractFileReference }
+Extension { #name : 'AbstractFileReference' }
 
-{ #category : #'*Tesseract' }
+{ #category : '*Tesseract' }
 AbstractFileReference >> tesseractInputFile [
 
 	^ self

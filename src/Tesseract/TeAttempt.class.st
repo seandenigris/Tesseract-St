@@ -1,15 +1,17 @@
 Class {
-	#name : #TeAttempt,
-	#superclass : #Object,
+	#name : 'TeAttempt',
+	#superclass : 'Object',
 	#instVars : [
 		'conversionCommand',
 		'result',
 		'result3'
 	],
-	#category : 'Tesseract-Experimenting'
+	#category : 'Tesseract-Experimenting',
+	#package : 'Tesseract',
+	#tag : 'Experimenting'
 }
 
-{ #category : #'accessing-magritte' }
+{ #category : 'accessing-magritte' }
 TeAttempt >> descriptionResult [
 	<magritteDescription>
 	^ MAToOneRelationDescription new
@@ -19,12 +21,12 @@ TeAttempt >> descriptionResult [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeAttempt >> result3 [
 	^ self maLazyFromDescriptionOf: #result3
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeAttempt >> result3: anObject [
 	result3 := anObject
 ]

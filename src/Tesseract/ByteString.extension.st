@@ -1,6 +1,6 @@
-Extension { #name : #ByteString }
+Extension { #name : 'ByteString' }
 
-{ #category : #'*Tesseract' }
+{ #category : '*Tesseract' }
 ByteString >> teAsXMLElement [
 	| doc |
 	doc := XMLDOMParser parse: self.

@@ -1,13 +1,15 @@
 Class {
-	#name : #TeHocrWordMorph,
-	#superclass : #Morph,
+	#name : 'TeHocrWordMorph',
+	#superclass : 'Morph',
 	#instVars : [
 		'model'
 	],
-	#category : 'Tesseract-UI'
+	#category : 'Tesseract-UI',
+	#package : 'Tesseract',
+	#tag : 'UI'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 TeHocrWordMorph class >> on: line [
 
 	^ self new
@@ -15,50 +17,50 @@ TeHocrWordMorph class >> on: line [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrWordMorph >> beCash [
 
 	self model receipt beCash
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrWordMorph >> beDate [
 
 	^ self model beDate
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrWordMorph >> bePaymentType [
 
 	self model bePaymentType
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeHocrWordMorph >> beTotalAmount [
 
 	^ self model beTotalAmount
 ]
 
-{ #category : #'submorphs-add/remove' }
+{ #category : 'submorphs-add/remove' }
 TeHocrWordMorph >> delete [
 
 	self owner changed. "Otherwise we leave weird border-like trails"
 	super delete
 ]
 
-{ #category : #'event handling' }
+{ #category : 'event handling' }
 TeHocrWordMorph >> handlesMouseDown: anEvent [
 
 	^ true
 ]
 
-{ #category : #'event handling' }
+{ #category : 'event handling' }
 TeHocrWordMorph >> handlesMouseOver: event [
 
 	^ true
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TeHocrWordMorph >> initialize [
 
 	| highlightColor |
@@ -67,32 +69,32 @@ TeHocrWordMorph >> initialize [
 	self color: highlightColor.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TeHocrWordMorph >> model [
 	^ model
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 TeHocrWordMorph >> model: anObject [
 	model := anObject.
 	self bounds: model boundingBox.
 	self setBalloonText: model string
 ]
 
-{ #category : #'event handling' }
+{ #category : 'event handling' }
 TeHocrWordMorph >> mouseDown: evt [
 
 	evt yellowButtonPressed ifTrue: [ self showContextMenu ]
 ]
 
-{ #category : #'event handling' }
+{ #category : 'event handling' }
 TeHocrWordMorph >> mouseLeave: anEvent [
 
 	self hasHalo ifTrue: [ ^ self ]. "Or the halos would disappear before we could click"
 	self delete
 ]
 
-{ #category : #'event handling' }
+{ #category : 'event handling' }
 TeHocrWordMorph >> showContextMenu [
 
 	| menu |

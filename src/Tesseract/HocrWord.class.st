@@ -1,10 +1,12 @@
 Class {
-	#name : #HocrWord,
-	#superclass : #HocrNode,
-	#category : #'Tesseract-Core'
+	#name : 'HocrWord',
+	#superclass : 'HocrNode',
+	#category : 'Tesseract-Core',
+	#package : 'Tesseract',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 HocrWord class >> exampleBoundingBox [
 	<gtExample>
 	| word |
@@ -16,35 +18,35 @@ HocrWord class >> exampleBoundingBox [
 	^ word
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 HocrWord class >> exampleFromString [
 	<gtExample>
 	^ self on: self exampleInput.
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 HocrWord class >> exampleFromString2 [
 	<gtExample>
 	^ self on: self exampleInput2.
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 HocrWord class >> exampleFromXMLElement [
 	<gtExample>
 	^ self on: self exampleInput teAsXMLElement.
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 HocrWord class >> exampleInput [
 	^ '<span class="ocrx_word" id="word_1_39" title="bbox 29 61 111 98; x_wconf 58">Subtotal</span>'
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 HocrWord class >> exampleInput2 [
 	^ '<span class="ocrx_word" id="word_1_39" title="bbox 127 61 227 98; x_wconf 58">Subtotal</span>'
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 HocrWord >> amountRule [
 
 	| number dollars cents |
@@ -53,7 +55,7 @@ HocrWord >> amountRule [
 	^ $$ asPParser optional, (dollars, cents optional) flatten end ==> #second.
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 HocrWord >> asAmount [
 
 	| parseResult |
@@ -61,19 +63,19 @@ HocrWord >> asAmount [
 	^ parseResult asNumber
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 HocrWord >> asDate [
 
 	^ Date pp2Parser parse: self string.
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 HocrWord >> asMorph [
 
 	^ TeHocrWordMorph on: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 HocrWord >> extractDate [
 
 	| parseResult |
@@ -81,13 +83,13 @@ HocrWord >> extractDate [
 	^ UIManager default inform: parseResult
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 HocrWord >> isValidAmount [
 
 	^ self amountRule matches: self string.
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 HocrWord >> isValidDate [
 
 	^ Date parser matches: self string.

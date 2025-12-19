@@ -1,14 +1,16 @@
 Class {
-	#name : #TeSubject,
-	#superclass : #Object,
+	#name : 'TeSubject',
+	#superclass : 'Object',
 	#instVars : [
 		'file',
 		'ocrAttempts'
 	],
-	#category : 'Tesseract-Experimenting'
+	#category : 'Tesseract-Experimenting',
+	#package : 'Tesseract',
+	#tag : 'Experimenting'
 }
 
-{ #category : #'accessing-magritte' }
+{ #category : 'accessing-magritte' }
 TeSubject >> descriptionFile [
 	<magritteDescription>
 	^ MAToOneRelationDescription new
@@ -18,7 +20,7 @@ TeSubject >> descriptionFile [
 		yourself
 ]
 
-{ #category : #'accessing-magritte' }
+{ #category : 'accessing-magritte' }
 TeSubject >> descriptionOcrAttempts [
 	<magritteDescription>
 	^ MAToManyRelationDescription new
@@ -39,7 +41,7 @@ TeSubject >> descriptionOcrAttempts [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 TeSubject >> printOn: aStream [
 	self file ifNotNil: [ :f | aStream nextPutAll: f basename ].
 ]
